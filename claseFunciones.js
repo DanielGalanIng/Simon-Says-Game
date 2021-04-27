@@ -16,3 +16,22 @@ printAge('Sasha', 34, 'Marie');
 //  Pero no se los enviamos, no va a salir error
 //  Intentará imprimir pero pondrá undefined en los
 //  parametros que no ingresemos. Esto debido a que js es debilmente tipado
+
+
+//Alcance de las funciones
+
+var named = 'Daniel'; //Si una variable no esta definida dentro de una función, es de alcance global. puede ser accdedida desde cualquier función. Esta variable se asigna al objeto global.
+
+function printNameUpperCase() {
+    named = named.toUpperCase();
+    console.log(named);
+}
+
+printNameUpperCase();
+
+function printNameUpperCase(n) {
+    n = n.toUpperCase()
+    console.log(n)
+}
+
+printNameUpperCase('Elizabeth');
