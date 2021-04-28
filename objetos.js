@@ -67,22 +67,23 @@ var lisa = {
     age: 20
 }
 
-function printFullNameLastname(person) {
+function printFullNameAndAge(person) {
     var {name, lastName, age} = person 
     console.log(`Hola, me llamo ${name} ${lastName} y tengo ${age} años`);
 }
 
-printFullNameLastname(lisa);
-printFullNameLastname(elizabeth);
+printFullNameAndAge(lisa);
+printFullNameAndAge(elizabeth);
 
 //Objeto modificando parámetros
 
 function bithday(person) {
     return {
-        ...person,
+        ...person, //Desglozar el objeto pero permitiendo que se pueda modificar pero 
         age: person.age + 1 
     }
 }
 
 bithday(elizabeth)
 bithday(lisa)
+
